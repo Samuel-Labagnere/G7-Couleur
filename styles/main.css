@@ -28,3 +28,78 @@ h1, h2, h3, h4, h5, h6{
 /* /////////////////////////////////////////////// */
 
 /* --> REST HERE <-- */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: violet;
+    justify-content: flex-start;
+
+}
+
+.container{
+    background-color: yellow;
+    width: 50%;
+    height: 100vh;
+    max-width: 1000px;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+    width: 41.875rem;
+    height: 31.313rem;
+    background-color: grey;
+    margin-left: -100px;
+
+}
+
+.left{
+    display: flex;
+    width: 66%;
+    min-height: 400px;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    color: #322F2E;
+}
+
+.left h1{
+    font-size: 67.34px;
+}
+
+.left p{
+    margin: 16px 0;
+}
+
+button{
+    border-color: #322F2E;
+    padding: 7px 14px;
+    font-weight: bold;
+    color: #322F2E ;
+    background-color: unset;
+}
+
+@media only screen and (max-width:768px){
+    section{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}
