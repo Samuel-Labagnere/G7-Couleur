@@ -1,0 +1,27 @@
+/* //////////////////// FONTS //////////////////// */
+@font-face {
+    font-family: 'FogtwoNo5';
+    src: url('fonts/FogtwoNo5.ttf') format('truetype'),
+        url('fonts/FogtwoNo5.otf') format('opentype');
+}
+:root{
+    --text-color: #322F2E;
+    --blue-color: #B7CAD6;
+    --brown-color: #F09686;
+    --green-color: #EAE9D6;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'FogtwoNo5';
+}
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+.underline{
+    text-decoration: underline;
+}
+/* /////////////////////////////////////////////// */
+
+/* --> REST HERE <-- */
