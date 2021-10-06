@@ -46,6 +46,9 @@ section{
     justify-content: flex-start;
 
 }
+.logo{
+    background-color: aliceblue;
+}
 
 .container{
     background-color: yellow;
@@ -54,9 +57,19 @@ section{
     max-width: 1000px;
     margin: 0 ;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+.atelier{
+    background-color: #ffffff;
+    margin-right: 20%;
+    top: 50%;
+
+
+}
+
 
 .right{
     width: 41.875rem;
@@ -78,10 +91,21 @@ section{
 
 .left h1{
     font-size: 67.34px;
+    letter-spacing: 8px;
 }
 
 .left p{
     margin: 16px 0;
+}
+
+.left h2{
+    text-align: center;
+    color: #ffffff;
+    background-color: #B83101;
+    padding: 4px 8px;
+    width: 15%;
+    font-size: 12.58px;
+
 }
 
 button{
@@ -90,6 +114,7 @@ button{
     font-weight: bold;
     color: #322F2E ;
     background-color: unset;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:768px){
