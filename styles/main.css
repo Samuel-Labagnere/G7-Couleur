@@ -9,12 +9,12 @@
 
 /* //////////////////// FONTS //////////////////// */
 @font-face {
-    font-family: 'FogtwoNo5';
-    src: url('fonts/FogtwoNo5.ttf') format('truetype'),
-        url('fonts/FogtwoNo5.otf') format('opentype');
+    font-family: 'Rebeqa';
+    src: url('fonts/Rebeqa-Black.ttf') format('truetype'),
+        url('fonts/Rebeqa-Black.otf') format('opentype');
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: 'FogtwoNo5';
+    font-family: 'Rebeqa';
 }
 .bold{
     font-weight: bold;
