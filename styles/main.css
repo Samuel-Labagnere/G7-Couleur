@@ -112,7 +112,7 @@ nav{
 .left h2{
     text-align: center;
     color: #ffffff;
-    /*background-color: #B83101;*/
+    background-color: #B83101;
     padding: 4px 8px;
     width: 15%;
     font-size: 12.58px;
@@ -145,7 +145,14 @@ button{
 
 bottom: 8%;
 right: 6%;
+}
 
+.leftbar{
+    background-color: blue;
 
-    
+}
+
+.leftbarcontent{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
 }
