@@ -81,6 +81,22 @@ function postfilter(){
 	photo.setAttribute('src', data);
 }	
 
+function revert(artworkName){
+	let revertSrc = "";
+	switch(artworkName){
+		case 'derainImg':
+			revertSrc = 'img/derain.jpg';
+		break;
+		case 'hokusaiImg':
+			revertSrc = 'img/hokusai.jpg';
+		break;
+		case 'turnerImg':
+			revertSrc = 'img/turner.jpg';
+		break;
+	}
+	photo.setAttribute('src', revertSrc)
+}
+
 function negatif(artworkName, canvasName){
 
 	// CHARGEMENT DES TABLEAUX DE PIXELS
