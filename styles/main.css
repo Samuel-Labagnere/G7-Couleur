@@ -159,7 +159,7 @@ nav {
     background-color: var(--white-color);
     margin-right: 20%;
     top: 50%;
-
+}
 
 .container2 {
   background-color: #b7cad6;
@@ -222,6 +222,7 @@ nav {
     padding: 4px 8px;
     width: 29%;
     font-size: 12.58px;
+}
 
 .left h2 {
   text-align: center;
