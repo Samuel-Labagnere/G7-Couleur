@@ -94,13 +94,12 @@ p{
 
 /* --> REST HERE <-- */
 body{
-    background-color: #F3ECE4;
+    background-color: var(--background-color);
 }
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #F3ECE4;
 }
 
 .accueil {
@@ -222,7 +221,7 @@ nav {
 }
 
 button {
-    /*border-color: #322F2E;*/
+    border-color: var(--text-color);
     padding: 7px 14px;
     font-weight: bold;
     color: var(--text-color);
@@ -254,7 +253,4 @@ button {
     position: sticky;
     top: 20px; */
     position: fixed;
-}
-body{
-    background-color: var(--background-color);
 }
