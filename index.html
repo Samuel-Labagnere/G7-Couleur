@@ -6,10 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css"> <!-- MAIN.SCSS -->
+    <script src="filtres/filtre.js"></script> <!-- FILTRE.JS -->
+    <!-- ICON -->
+    <link rel="icon" id="darkThemeIcon" type="image/x-icon" href="img/Logo_White.ico" />
+    <link rel="icon" id="lightThemeIcon" type="image/x-icon" href="img/Logo.ico" />
+    <!-- ---- -->
     <title>Atelier Couleur G7</title>
 </head>
 
 <body>
+    <!-- ICON AUTO SELECTOR -->
+    <script>
+        lightSchemeIcon = document.querySelector('link#lightThemeIcon');
+        darkSchemeIcon = document.querySelector('link#darkThemeIcon');
+
+        matcher = window.matchMedia('(prefers-color-scheme: dark)');
+        matcher.addListener(onUpdate);
+        onUpdate();
+
+        function onUpdate() {
+        if (matcher.matches) {
+            lightSchemeIcon.remove();
+            document.head.append(darkSchemeIcon);
+        } else {
+            document.head.append(lightSchemeIcon);
+            darkSchemeIcon.remove();
+        }
+        }
+    </script>
+    <!-- ------------------ -->
 
 <section class="accueil">
     <h1 class="title">l'Atelier<sup>&reg;</sup></h1>
@@ -48,7 +73,7 @@
                     voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
                     labore ut aspernatur incidunt exercitationem.</p>
                     
-                    <button>
+                    <button onclick="binarisation();">
                         btn-action
                     </button>
                 </div>
@@ -98,7 +123,7 @@
                     voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
                     labore ut aspernatur incidunt exercitationem.</p>
                     
-                    <button>
+                    <button onclick="blueToRed();">
                         btn-action
                     </button>
                 </div>
@@ -138,7 +163,7 @@
                     voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
                     labore ut aspernatur incidunt exercitationem.</p>
                     
-                    <button>
+                    <button onclick="nomDuFiltre();">
                         btn-action
                     </button>
                 </div>

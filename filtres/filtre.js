@@ -127,6 +127,7 @@ function noir(){
 	///////////////////////////////////////////////////// NOS FILTRES /////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+///// SAMUEL
 function blueToRed(){
 	// CHARGEMENT DES TABLEAUX DE PIXELS
 	prefilter();
@@ -164,6 +165,7 @@ function blueToRed(){
 	postfilter();
 }
 
+///// RÉGIS
 function binarisation(){
 	// CHARGEMENT DES TABLEAUX DE PIXELS
 	prefilter();
@@ -189,6 +191,7 @@ function binarisation(){
 	postfilter();
 }
 
+///// YANI
 function nomDuFiltre(){
 	// CHARGEMENT DES TABLEAUX DE PIXELS
 	prefilter();
