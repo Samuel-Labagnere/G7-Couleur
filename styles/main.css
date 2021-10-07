@@ -117,7 +117,7 @@ h6 {
 
 .title {
     font-size: 90.44px;
-    color: #322f2e;
+    color: var(--text-color);
 }
 
 section {
@@ -208,7 +208,7 @@ nav {
 .left h2 {
     text-align: center;
     color: var(--white-color);
-    background-color: #b83101;
+    background-color: var(--movement-color);
     padding: 4px 8px;
     width: 29%;
     font-size: 12.58px;
