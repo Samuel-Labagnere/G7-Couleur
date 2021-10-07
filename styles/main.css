@@ -6,6 +6,7 @@
     --brown-color: #eda093;
     --green-color: #eae9d6;
     --movement-color: #b83101;
+    --background-color: #F3ECE4;
 }
 /* ////////////////////////////////////////////// */
 
@@ -105,12 +106,11 @@ h6 {
 }
 
 .mouse {
-    color: #322f2e;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    color: #322f2e;
     bottom: 6%;
     left: 48%;
 }
@@ -247,4 +247,7 @@ button {
     position: sticky;
     top: 20px; */
     position: fixed;
+}
+body{
+    background-color: var(--background-color);
 }
