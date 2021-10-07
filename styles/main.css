@@ -25,6 +25,10 @@ h5,
 h6 {
     font-family: "Rebeqa";
 }
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
 .roboto {
     font-family: "Roboto", sans-serif !important;
 }
@@ -88,11 +92,14 @@ h6 {
 }
 
 /* --> REST HERE <-- */
-
+body{
+    background-color: #F3ECE4;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: #F3ECE4;
 }
 
 .accueil {
