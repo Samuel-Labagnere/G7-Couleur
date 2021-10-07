@@ -6,53 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css"> <!-- MAIN.SCSS -->
-    <script src="/js/animations.js"></script>
+    <script src="filtres/filtre.js"></script> <!-- FILTRE.JS -->
+    <!-- ICON -->
+    <link rel="icon" id="darkThemeIcon" type="image/x-icon" href="img/Logo_White.ico" />
+    <link rel="icon" id="lightThemeIcon" type="image/x-icon" href="img/Logo.ico" />
+    <!-- ---- -->
     <title>Atelier Couleur G7</title>
     
 </head>
 
 <body>
+    <!-- ICON AUTO SELECTOR -->
+    <script>
+        lightSchemeIcon = document.querySelector('link#lightThemeIcon');
+        darkSchemeIcon = document.querySelector('link#darkThemeIcon');
 
+        matcher = window.matchMedia('(prefers-color-scheme: dark)');
+        matcher.addListener(onUpdate);
+        onUpdate();
+
+        function onUpdate() {
+        if (matcher.matches) {
+            lightSchemeIcon.remove();
+            document.head.append(darkSchemeIcon);
+        } else {
+            document.head.append(lightSchemeIcon);
+            darkSchemeIcon.remove();
+        }
+        }
+    </script>
+    <!-- ------------------ -->
+
+<section class="accueil">
+    <h1 class="title">l'Atelier<sup>&reg;</sup></h1>
+</section>
+<section>
+        <nav>
+            <div>
+                <h2>l'Atelier<sup>&reg;</sup></h2>
+            </div>
+            <div><svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.6483 24.9999C22.6483 24.9999 21.9595 24.3242 21.6216 23.6486C21.6216 23.6486 21.2838 22.9729 20.9459 22.2972L14.1892 5.40531L13.5135 3.37828L12.5 0.337738H11.8243C11.8243 0.675576 11.4865 1.68909 11.1486 2.02693L3.71622 19.2567L2.02703 22.2972C1.35135 24.3242 0.337838 24.3242 0 24.3242V24.6621H6.08108V24.3242H5.06757C3.71622 24.3242 3.37838 23.9864 3.37838 23.3107C3.37838 22.9729 3.37838 22.635 3.37838 22.2972L4.39189 19.5945L5.40541 17.5675H9.45946H16.5541L18.5811 22.9729C18.5811 23.3107 18.5811 23.6486 18.5811 23.6486C18.5811 24.3242 17.9054 24.6621 17.5676 24.6621H16.5541V24.9999H22.6483ZM9.45946 16.8918H5.40541L11.1486 3.71612H11.4865C11.4865 4.39179 11.4865 5.06747 11.8243 5.74314L16.2162 16.8918H9.45946Z" fill="#322F2E"/>
+                <path d="M28.3757 0.337838C28.0379 0.337838 27.3622 0.675676 27.0244 0.675676C25.3352 0.675676 23.3082 0 21.619 0C18.2406 0 15.5379 1.35135 13.173 3.37838C13.173 3.37838 13.173 3.71622 12.8352 3.71622L13.8487 5.74324C13.8487 5.74324 13.8487 5.40541 14.1866 5.40541C15.5379 2.36487 18.2406 0.675676 21.2812 0.675676C24.6595 0.675676 28.0379 3.04054 28.0379 6.08108V9.12162H28.7136L28.3757 0.337838ZM29.0514 19.5946C27.7001 22.2973 24.9974 23.9865 21.619 23.9865H21.2812L21.619 25H22.2947H22.6325C25.673 24.6622 28.0379 22.973 29.3893 19.9324L29.0514 19.5946Z" fill="#322F2E"/>
+            </svg>
+        </div>
+    </nav>
+    <div class="leftbar">
+        <div class="leftbarcontent">
+            <h2>l'estaque de la route tournante</h2>
+        </div>
     </div>
-    <section id="number1">
-        <nav>
-            <div>
-                <h2>l'Atelier</h2>
-            </div>
-
-            <div class="logo"><svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.6483 24.9999C22.6483 24.9999 21.9595 24.3242 21.6216 23.6486C21.6216 23.6486 21.2838 22.9729 20.9459 22.2972L14.1892 5.40531L13.5135 3.37828L12.5 0.337738H11.8243C11.8243 0.675576 11.4865 1.68909 11.1486 2.02693L3.71622 19.2567L2.02703 22.2972C1.35135 24.3242 0.337838 24.3242 0 24.3242V24.6621H6.08108V24.3242H5.06757C3.71622 24.3242 3.37838 23.9864 3.37838 23.3107C3.37838 22.9729 3.37838 22.635 3.37838 22.2972L4.39189 19.5945L5.40541 17.5675H9.45946H16.5541L18.5811 22.9729C18.5811 23.3107 18.5811 23.6486 18.5811 23.6486C18.5811 24.3242 17.9054 24.6621 17.5676 24.6621H16.5541V24.9999H22.6483ZM9.45946 16.8918H5.40541L11.1486 3.71612H11.4865C11.4865 4.39179 11.4865 5.06747 11.8243 5.74314L16.2162 16.8918H9.45946Z" fill="#322F2E"/>
-                <path d="M28.3757 0.337838C28.0379 0.337838 27.3622 0.675676 27.0244 0.675676C25.3352 0.675676 23.3082 0 21.619 0C18.2406 0 15.5379 1.35135 13.173 3.37838C13.173 3.37838 13.173 3.71622 12.8352 3.71622L13.8487 5.74324C13.8487 5.74324 13.8487 5.40541 14.1866 5.40541C15.5379 2.36487 18.2406 0.675676 21.2812 0.675676C24.6595 0.675676 28.0379 3.04054 28.0379 6.08108V9.12162H28.7136L28.3757 0.337838ZM29.0514 19.5946C27.7001 22.2973 24.9974 23.9865 21.619 23.9865H21.2812L21.619 25H22.2947H22.6325C25.673 24.6622 28.0379 22.973 29.3893 19.9324L29.0514 19.5946Z" fill="#322F2E"/>
-                </svg>
-            </div>
-
-        </nav>
-        <div class="container">
-            <div class="left">
-                <div class="content">
-
-                    <h1>
-                        André Derain
-                    </h1>
-
-                    <h2>
-                        Fauvisme
-                    </h2>
-                    <p>
-
-
-
-                        L'Estaque de la 
-                        route tournante est un tableau d'André de Rain, peint en 1880.
-                        Ce tableau arbore des teintes rougeâtres et orangées, paresemées de légères pointes de verts
-                        disséminées à quelques endroits stratégiques.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequuntur atque quos
-                        voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
-                        labore ut aspernatur incidunt exercitationem.</p>
-
-                    <button>
-                        btn-action
+    <div class="container">
+        <div class="left">
+            <div class="content">
+                
+                <h1>
+                    André Derain
+                </h1>
+                
+                <h2 class="roboto medium ">
+                    Fauvisme
+                </h2>
+                <p>
+                    L'Estaque de la route tournante est un tableau d'André de Rain, peint en 1880.
+                    Ce tableau arbore des teintes rougeâtres et orangées, paresemées de légères pointes de verts
+                    disséminées à quelques endroits stratégiques.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequuntur atque quos
+                    voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
+                    labore ut aspernatur incidunt exercitationem.</p>
+                    
+                    <button title="Binarisation (Noir&Blanc)" onclick="binarisation();" class="hvr-sweep-to-right">
+                        Appliquer le filtre
                     </button>
                 </div>
             </div>
@@ -60,120 +85,45 @@
         <div class="right">
             <img src="/img/" alt="">
         </div>
-        <div class="leftbar">
-
-            <div class="leftbarcontent">
-                <h2>l'estaque de la route tournante</h2>
-            </div>
-        </div>
-
-<div class="arrow">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 1V15" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15 8L8 15L1 8" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        
-</div>
-
-
-
-    </section id="number2">
-
-
-    <section>
-        <nav>
-            <div>
-                <h2>l'Atelier</h2>
-            </div>
-
-            <div class="logo"><svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.6483 24.9999C22.6483 24.9999 21.9595 24.3242 21.6216 23.6486C21.6216 23.6486 21.2838 22.9729 20.9459 22.2972L14.1892 5.40531L13.5135 3.37828L12.5 0.337738H11.8243C11.8243 0.675576 11.4865 1.68909 11.1486 2.02693L3.71622 19.2567L2.02703 22.2972C1.35135 24.3242 0.337838 24.3242 0 24.3242V24.6621H6.08108V24.3242H5.06757C3.71622 24.3242 3.37838 23.9864 3.37838 23.3107C3.37838 22.9729 3.37838 22.635 3.37838 22.2972L4.39189 19.5945L5.40541 17.5675H9.45946H16.5541L18.5811 22.9729C18.5811 23.3107 18.5811 23.6486 18.5811 23.6486C18.5811 24.3242 17.9054 24.6621 17.5676 24.6621H16.5541V24.9999H22.6483ZM9.45946 16.8918H5.40541L11.1486 3.71612H11.4865C11.4865 4.39179 11.4865 5.06747 11.8243 5.74314L16.2162 16.8918H9.45946Z" fill="#322F2E"/>
-                <path d="M28.3757 0.337838C28.0379 0.337838 27.3622 0.675676 27.0244 0.675676C25.3352 0.675676 23.3082 0 21.619 0C18.2406 0 15.5379 1.35135 13.173 3.37838C13.173 3.37838 13.173 3.71622 12.8352 3.71622L13.8487 5.74324C13.8487 5.74324 13.8487 5.40541 14.1866 5.40541C15.5379 2.36487 18.2406 0.675676 21.2812 0.675676C24.6595 0.675676 28.0379 3.04054 28.0379 6.08108V9.12162H28.7136L28.3757 0.337838ZM29.0514 19.5946C27.7001 22.2973 24.9974 23.9865 21.619 23.9865H21.2812L21.619 25H22.2947H22.6325C25.673 24.6622 28.0379 22.973 29.3893 19.9324L29.0514 19.5946Z" fill="#322F2E"/>
-                </svg>
-                </div>
-        </nav>
-        <div class="container2">
-            <div class="left">
-                <div class="content">
-
-                    <h1>
-                        André Derain
-                    </h1>
-               
-                    <h2>
-                        Fauvisme
-                    </h2>
-                    <p>
-                        L'Estaque de la route tournante est un tableau d'André de Rain, peint en 1880.
-                        Ce tableau arbore des teintes rougeâtres et orangées, paresemées de légères pointes de verts
-                        disséminées à quelques endroits stratégiques.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequuntur atque quos
-                        voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
-                        labore ut aspernatur incidunt exercitationem.</p>
-
-                    <button>
-                        btn-action
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="right">
-            <img src="/img/" alt="">
-        </div>
-        <div class="leftbar">
+        <div class="arrow">
+            <svg class="fix" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 1V15" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 8L8 15L1 8" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             
-            <div class="leftbarcontent">
-                <h2>l'estaque de la route tournante</h2>
-            </div>
         </div>
-
-<div class="arrow">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 1V15" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15 8L8 15L1 8" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
         
-</div>
-
-
-
-    </section id="number3">
-
-    <section>
-        <nav>
-            <div>
-                <h2>l'Atelier</h2>
-            </div>
-
-            <div class="logo"><svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.6483 24.9999C22.6483 24.9999 21.9595 24.3242 21.6216 23.6486C21.6216 23.6486 21.2838 22.9729 20.9459 22.2972L14.1892 5.40531L13.5135 3.37828L12.5 0.337738H11.8243C11.8243 0.675576 11.4865 1.68909 11.1486 2.02693L3.71622 19.2567L2.02703 22.2972C1.35135 24.3242 0.337838 24.3242 0 24.3242V24.6621H6.08108V24.3242H5.06757C3.71622 24.3242 3.37838 23.9864 3.37838 23.3107C3.37838 22.9729 3.37838 22.635 3.37838 22.2972L4.39189 19.5945L5.40541 17.5675H9.45946H16.5541L18.5811 22.9729C18.5811 23.3107 18.5811 23.6486 18.5811 23.6486C18.5811 24.3242 17.9054 24.6621 17.5676 24.6621H16.5541V24.9999H22.6483ZM9.45946 16.8918H5.40541L11.1486 3.71612H11.4865C11.4865 4.39179 11.4865 5.06747 11.8243 5.74314L16.2162 16.8918H9.45946Z" fill="#322F2E"/>
-                <path d="M28.3757 0.337838C28.0379 0.337838 27.3622 0.675676 27.0244 0.675676C25.3352 0.675676 23.3082 0 21.619 0C18.2406 0 15.5379 1.35135 13.173 3.37838C13.173 3.37838 13.173 3.71622 12.8352 3.71622L13.8487 5.74324C13.8487 5.74324 13.8487 5.40541 14.1866 5.40541C15.5379 2.36487 18.2406 0.675676 21.2812 0.675676C24.6595 0.675676 28.0379 3.04054 28.0379 6.08108V9.12162H28.7136L28.3757 0.337838ZM29.0514 19.5946C27.7001 22.2973 24.9974 23.9865 21.619 23.9865H21.2812L21.619 25H22.2947H22.6325C25.673 24.6622 28.0379 22.973 29.3893 19.9324L29.0514 19.5946Z" fill="#322F2E"/>
-                </svg>
+        
+        
+</section>
+<section>
+    <div class="container">
+        <div class="left">
+            <div class="leftbar">
+            
+                <div class="leftbarcontent">
+                    <h2>l'estaque de la route tournante</h2>
                 </div>
-        </nav>
-        <div class="container">
-            <div class="left">
-                <div class="content">
-
-                    <h1>
-                        André Derain
-                    </h1>
-               
-                    <h2>
-                        Fauvisme
-                    </h2>
-                    <p>
-                        L'Estaque de la route tournante est un tableau d'André de Rain, peint en 1880.
-                        Ce tableau arbore des teintes rougeâtres et orangées, paresemées de légères pointes de verts
-                        disséminées à quelques endroits stratégiques.
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequuntur atque quos
-                        voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
-                        labore ut aspernatur incidunt exercitationem.</p>
-
-                    <button>
-                        btn-action
+            </div>
+            <div class="content">
+                
+                <h1>
+                    Katsuki Hokusai
+                </h1>
+                
+                <h2 class="roboto medium ">
+                    Ukiyo-e
+                </h2>
+                <p>
+                    Cette estampe est l'œuvre la plus connue de Hokusai et la première de sa fameuse série Trente-six vues du mont FujiNote 2, dans laquelle l'utilisation du bleu de Prusse renouvelait le langage de l'estampe japonaise. 
+                </br> La composition de La Vague, synthèse de l'estampe japonaise traditionnelle et de la « perspective » occidentale, lui valut un succès immédiat au Japon, puis en Europe, où elle fut une des sources d'inspiration des impressionnistes.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequuntur atque quos
+                    voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
+                    labore ut aspernatur incidunt exercitationem.</p>
+                    
+                    <button title="Blue To Red" onclick="blueToRed();" class="hvr-sweep-to-right">
+                        Appliquer le filtre
                     </button>
                 </div>
             </div>
@@ -181,24 +131,43 @@
         <div class="right">
             <img src="/img/" alt="">
         </div>
-        <div class="leftbar">
-            
-            <div class="leftbarcontent">
-                <h2>l'estaque de la route tournante</h2>
+        
+        
+</section>
+
+<section>
+    <div class="container">
+        <div class="left">
+            <div class="content">
+                
+                <h1>
+                    William Turner
+                </h1>
+                
+                <h2 class="roboto medium ">
+                    Romantisme
+                </h2>
+                <p>
+                    L'Estaque de la route tournante est un tableau d'André de Rain, peint en 1880.
+                    Ce tableau arbore des teintes rougeâtres et orangées, paresemées de légères pointes de verts
+                    disséminées à quelques endroits stratégiques.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequuntur atque quos
+                    voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
+                    labore ut aspernatur incidunt exercitationem.</p>
+                    
+                    <button title="Nom du filtre" onclick="nomDuFiltre();" class="hvr-sweep-to-right">
+                        Appliquer le filtre
+                    </button>
+                </div>
             </div>
         </div>
-
-<div class="arrow">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 1V15" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15 8L8 15L1 8" stroke="#322F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <div class="right">
+            <img src="/img/" alt="">
+        </div>
         
-</div>
-
-
-
-    </section>
+        
+</section>
 
 
 
