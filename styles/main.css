@@ -172,6 +172,10 @@ nav {
     margin-left: -100px;
 
 }
+.right img{
+    width: 670px;
+    height: 501px;
+}
 
 .left{
     display: flex;
