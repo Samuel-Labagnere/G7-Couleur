@@ -71,19 +71,32 @@ section{
 
 }
 
-nav{
-    position: absolute;
-    /*background-color: azure;*/
-    width: 95%;
-    left: 3%;
-    top: 7%;
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    width: 100%;
+    padding: 0 40px;
+    top: 48px;
 }
 
-.logo{
-    position: absolute;
-    left: 95%;
-    top: 0%;
+.leftbar{
+    background-color: blue;
+    height: 100%;
+    max-height: 726px;
+    width: 32px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 32px;
 }
+
+.leftbarcontent{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
 
 .container{
     background-color: #EDA093;
@@ -169,16 +182,6 @@ button{
 
 bottom: 8%;
 right: 6%;
-}
-
-.leftbar{
-    background-color: blue;
-
-}
-
-.leftbarcontent{
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
 }
 
 .fix{
