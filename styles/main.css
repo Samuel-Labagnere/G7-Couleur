@@ -42,24 +42,36 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: violet;
+    /*background-color: violet;*/
     justify-content: flex-start;
 
 }
+
+nav{
+    position: absolute;
+    /*background-color: azure;*/
+    width: 95%;
+    left: 3%;
+    top: 7%;
+}
+
 .logo{
-    background-color: aliceblue;
+    position: absolute;
+    left: 95%;
+    top: 0%;
 }
 
 .container{
-    background-color: yellow;
-    width: 50%;
-    height: 100vh;
-    max-width: 1000px;
-    margin: 0 ;
+    background-color: #EDA093;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 50%;
+    height: 100vh;
+    max-width: 1000px;
+    margin: 0 ;
+   
 }
 
 .atelier{
@@ -83,7 +95,6 @@ section{
     display: flex;
     width: 66%;
     min-height: 400px;
-    background-color: blue;
     align-items: center;
     justify-content: center;
     color: #322F2E;
@@ -101,7 +112,7 @@ section{
 .left h2{
     text-align: center;
     color: #ffffff;
-    background-color: #B83101;
+    /*background-color: #B83101;*/
     padding: 4px 8px;
     width: 15%;
     font-size: 12.58px;
@@ -109,7 +120,7 @@ section{
 }
 
 button{
-    border-color: #322F2E;
+    /*border-color: #322F2E;*/
     padding: 7px 14px;
     font-weight: bold;
     color: #322F2E ;
@@ -127,4 +138,14 @@ button{
     .right{
         width: 100%;
     }
+}
+
+.arrow{
+    position: absolute;
+
+bottom: 8%;
+right: 6%;
+
+
+    
 }
