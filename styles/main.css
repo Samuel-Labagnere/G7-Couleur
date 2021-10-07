@@ -1,39 +1,43 @@
 /* //////////////////// VARS //////////////////// */
-:root{
-    --text-color: #322F2E;
-    --white-color: #FFFFFF;
-    --blue-color: #B7CAD6;
-    --brown-color: #EDA093;
-    --green-color: #EAE9D6;
-    --movement-color: #B83101;
+:root {
+    --text-color: #322f2e;
+    --white-color: #ffffff;
+    --blue-color: #b7cad6;
+    --brown-color: #eda093;
+    --green-color: #eae9d6;
+    --movement-color: #b83101;
 }
 /* ////////////////////////////////////////////// */
 
 /* //////////////////// FONTS //////////////////// */
 @font-face {
-    font-family: 'Rebeqa';
-    src: url('fonts/Rebeqa-Black.ttf') format('truetype'),
-        url('fonts/Rebeqa-Black.otf') format('opentype');
+    font-family: "Rebeqa";
+    src: url("fonts/Rebeqa-Black.ttf") format("truetype"), url("fonts/Rebeqa-Black.otf") format("opentype");
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* font-family: 'Roboto', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap'); /* font-weight: 500; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap'); /* font-weight: bold; */
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Rebeqa';
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); /* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"); /* font-weight: 500; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap"); /* font-weight: bold; */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Rebeqa";
 }
-.roboto{
-    font-family: 'Roboto', sans-serif !important;
+.roboto {
+    font-family: "Roboto", sans-serif !important;
 }
-.medium{
+.medium {
     font-weight: 500;
 }
-.bold{
+.bold {
     font-weight: bold;
 }
-.italic{
+.italic {
     font-style: italic;
 }
-.underline{
+.underline {
     text-decoration: underline;
 }
 /* /////////////////////////////////////////////// */
@@ -50,8 +54,8 @@ h1, h2, h3, h4, h5, h6{
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-  }
-  .hvr-sweep-to-right:before {
+}
+.hvr-sweep-to-right:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -70,26 +74,28 @@ h1, h2, h3, h4, h5, h6{
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active{
-      color: var(--white-color);
-  }
-  .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before{
+}
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+    color: var(--white-color);
+}
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-  }
+}
 
 /* --> REST HERE <-- */
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
-
-.accueil{
+.accueil {
     min-height: 100vh;
     width: 100%;
     /*background-color: blue;*/
@@ -98,12 +104,23 @@ h1, h2, h3, h4, h5, h6{
     justify-content: center;
 }
 
-.title{
-    font-size: 90.44px;
-    color: #322F2E;
+.mouse {
+    color: #322f2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: #322f2e;
+    bottom: 6%;
+    left: 48%;
 }
 
-section{
+.title {
+    font-size: 90.44px;
+    color: #322f2e;
+}
+
+section {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -111,7 +128,6 @@ section{
     justify-content: center;
     /*background-color: violet;*/
     justify-content: flex-start;
-
 }
 
 nav {
@@ -124,7 +140,7 @@ nav {
     top: 48px;
 }
 
-.leftbar{
+.leftbar {
     display: flex;
     align-items: center;
     background-color: var(--text-color);
@@ -137,13 +153,12 @@ nav {
     left: 32px;
 }
 
-.leftbarcontent{
+.leftbarcontent {
     writing-mode: vertical-rl;
     text-orientation: mixed;
 }
 
-
-.container{
+.container {
     background-color: var(--brown-color);
     display: flex;
     flex-direction: column;
@@ -152,28 +167,23 @@ nav {
     width: 50%;
     height: 100vh;
     max-width: 1000px;
-    margin: 0 ;
-   
+    margin: 0;
 }
 
-.atelier{
+.atelier {
     background-color: var(--white-color);
     margin-right: 20%;
     top: 50%;
-
-
 }
 
-
-.right{
+.right {
     width: 41.875rem;
     height: 31.313rem;
     background-color: grey;
     margin-left: -100px;
-
 }
 
-.left{
+.left {
     display: flex;
     width: 66%;
     min-height: 400px;
@@ -182,54 +192,53 @@ nav {
     color: var(--text-color);
 }
 
-.left h1{
+.left h1 {
     font-size: 67.34px;
     letter-spacing: 8px;
 }
 
-.left p{
+.left p {
     margin: 16px 0;
 }
 
-.left h2{
+.left h2 {
     text-align: center;
     color: var(--white-color);
-    background-color: #B83101;
+    background-color: #b83101;
     padding: 4px 8px;
     width: 29%;
     font-size: 12.58px;
-
 }
 
-button{
+button {
     /*border-color: #322F2E;*/
     padding: 7px 14px;
     font-weight: bold;
-    color: var(--text-color) ;
+    color: var(--text-color);
     background-color: unset;
     cursor: pointer;
 }
 
-@media only screen and (max-width:768px){
-    section{
+@media only screen and (max-width: 768px) {
+    section {
         flex-direction: column;
     }
-    .left{
+    .left {
         width: 100%;
     }
-    .right{
+    .right {
         width: 100%;
     }
 }
 
-.arrow{
+.arrow {
     position: absolute;
 
-bottom: 8%;
-right: 6%;
+    bottom: 8%;
+    right: 6%;
 }
 
-.fix{
+.fix {
     /* position: -webkit-sticky;
     position: sticky;
     top: 20px; */
