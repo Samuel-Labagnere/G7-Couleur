@@ -87,6 +87,14 @@ h1, h2, h3, h4, h5, h6{
   box-sizing: border-box;
 }
 
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.container0 {
+
+}
 
 .accueil{
     min-height: 100vh;
@@ -110,6 +118,7 @@ section{
     justify-content: center;
     /*background-color: violet;*/
     justify-content: flex-start;
+    scroll-snap-align: start;
 
 }
 
