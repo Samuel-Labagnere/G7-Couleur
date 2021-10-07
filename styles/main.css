@@ -36,6 +36,21 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+
+.accueil{
+    min-height: 100vh;
+    width: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 90.44px;
+    color: #322F2E;
+}
+
 section{
     min-height: 100vh;
     width: 100%;
