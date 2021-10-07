@@ -13,8 +13,17 @@
     src: url('fonts/Rebeqa-Black.ttf') format('truetype'),
         url('fonts/Rebeqa-Black.otf') format('opentype');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap'); /* font-weight: 500; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap'); /* font-weight: bold; */
 h1, h2, h3, h4, h5, h6{
     font-family: 'Rebeqa';
+}
+.roboto{
+    font-family: 'Roboto', sans-serif !important;
+}
+.medium{
+    font-weight: 500;
 }
 .bold{
     font-weight: bold;
