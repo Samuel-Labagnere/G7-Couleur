@@ -94,7 +94,8 @@ function revert(artworkName){
 			revertSrc = 'img/turner.jpg';
 		break;
 	}
-	photo.setAttribute('src', revertSrc)
+	let pictureToRevert = document.getElementById(artworkName);
+	pictureToRevert.setAttribute('src', revertSrc)
 }
 
 function negatif(artworkName, canvasName){

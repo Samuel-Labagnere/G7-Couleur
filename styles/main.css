@@ -6,6 +6,7 @@
   --brown-color: #eda093;
   --green-color: #eae9d6;
   --movement-color: #b83101;
+  --background-color: #f3ece4;
 }
 /* ////////////////////////////////////////////// */
 
@@ -25,6 +26,10 @@ h4,
 h5,
 h6 {
   font-family: "Rebeqa";
+}
+
+p {
+  font-family: "Roboto", sans-serif;
 }
 .roboto {
   font-family: "Roboto", sans-serif !important;
@@ -89,7 +94,9 @@ h6 {
 }
 
 /* --> REST HERE <-- */
-
+body {
+  background-color: var(--background-color);
+}
 * {
   padding: 0;
   margin: 0;
@@ -106,12 +113,11 @@ h6 {
 }
 
 .mouse {
-  color: #322f2e;
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  color: #322f2e;
   bottom: 6%;
   left: 48%;
 }
@@ -228,7 +234,7 @@ nav {
 }
 
 button {
-  /*border-color: #322F2E;*/
+  border-color: var(--text-color);
   padding: 7px 14px;
   font-weight: bold;
   color: var(--text-color);
