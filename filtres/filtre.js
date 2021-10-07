@@ -18,10 +18,10 @@ var width, height;
 var photo, canvas;
 var pix, imgd, context;
 
-function prefilter(){
+function prefilter(artworkName, canvasName){
 	
-	photo = document.getElementById('photo');
-	canvas = document.getElementById('mycanvas');
+	photo = document.getElementById(artworkName);
+	canvas = document.getElementById(canvasName);
 	context = canvas.getContext('2d');
 
 	var x = 0;
@@ -81,10 +81,10 @@ function postfilter(){
 	photo.setAttribute('src', data);
 }	
 
-function negatif(){
+function negatif(artworkName, canvasName){
 
 	// CHARGEMENT DES TABLEAUX DE PIXELS
-	prefilter();
+	prefilter(artworkName, canvasName);
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
 	// mise en rouge de la moitier gauche
@@ -128,9 +128,9 @@ function noir(){
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///// SAMUEL
-function blueToRed(){
+function blueToRed(artworkName, canvasName){
 	// CHARGEMENT DES TABLEAUX DE PIXELS
-	prefilter();
+	prefilter(artworkName, canvasName);
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
 	// remplacement du bleu par du rouge
@@ -166,9 +166,9 @@ function blueToRed(){
 }
 
 ///// RÉGIS
-function binarisation(){
+function binarisation(artworkName, canvasName){
 	// CHARGEMENT DES TABLEAUX DE PIXELS
-	prefilter();
+	prefilter(artworkName, canvasName);
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
 	// remplacement du bleu par du rouge
@@ -192,14 +192,22 @@ function binarisation(){
 }
 
 ///// YANI
-function nomDuFiltre(){
+function nomDuFiltre(artworkName, canvasName){
 	// CHARGEMENT DES TABLEAUX DE PIXELS
-	prefilter();
+	prefilter(artworkName, canvasName);
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
 	// remplacement du bleu par du rouge
-	
-    //// --> CODE HERE <-- ////
+
+	for (var x = 0; x < width; x++) {
+		for (var y = 0; y < height; y++) {
+			//// VERT EN BLEU
+				let blue = tb[x][y];
+				tb[x][y] = tg[x][y];
+				tr[x][y] = 0;
+				tg[x][y] = blue;
+		}
+	}
 
 	// MISE À JOUR DE L'IMAGE
 	postfilter();

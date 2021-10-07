@@ -82,14 +82,15 @@
                     voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
                     labore ut aspernatur incidunt exercitationem.</p>
                     
-                    <button title="Binarisation (Noir&Blanc)" onclick="binarisation();" class="hvr-sweep-to-right">
+                    <button title="Binarisation (Noir&Blanc)" onclick="binarisation('derainImg', 'derainCanvas');" class="hvr-sweep-to-right">
                         Appliquer le filtre
                     </button>
                 </div>
             </div>
         </div>
         <div class="right">
-            <img src="/img/" alt="">
+            <img id="derainImg" src='img/derain.jpg'/>
+            <canvas style="display: none;" id="derainCanvas"></canvas>
         </div>
         
         
@@ -116,14 +117,15 @@
                     voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
                     labore ut aspernatur incidunt exercitationem.</p>
                     
-                    <button title="Blue To Red" onclick="blueToRed();" class="hvr-sweep-to-right">
+                    <button title="Blue To Red" onclick="blueToRed('hokusaiImg', 'hokusaiCanvas');" class="hvr-sweep-to-right">
                         Appliquer le filtre
                     </button>
                 </div>
             </div>
         </div>
         <div class="right">
-            <img src="/img/" alt="">
+            <img id="hokusaiImg" src='img/hokusai.jpg'/>
+            <canvas style="display: none;" id="hokusaiCanvas"></canvas>
         </div>
         
         <div class="arrow">
@@ -157,14 +159,15 @@
                     voluptatibus voluptates ipsum aperiam, natus sequi minus totam maiores rem rerum eaque veritatis
                     labore ut aspernatur incidunt exercitationem.</p>
                     
-                    <button title="Nom du filtre" onclick="nomDuFiltre();" class="hvr-sweep-to-right">
+                    <button title="Nom du filtre" onclick="nomDuFiltre('turnerImg', 'turnerCanvas');" class="hvr-sweep-to-right">
                         Appliquer le filtre
                     </button>
                 </div>
             </div>
         </div>
         <div class="right">
-            <img src="/img/" alt="">
+            <img id="turnerImg" src='img/turner.jpg'/>
+            <canvas style="display: none;" id="turnerCanvas"></canvas>
         </div>
         
         
