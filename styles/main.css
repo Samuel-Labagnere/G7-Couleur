@@ -125,10 +125,12 @@ nav {
 }
 
 .leftbar{
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    background-color: var(--text-color);
     height: 100%;
     max-height: 726px;
-    width: 32px;
+    width: 2px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -192,7 +194,7 @@ nav {
 .left h2{
     text-align: center;
     color: var(--white-color);
-    background-color: var(--movement-color);
+    background-color: #B83101;
     padding: 4px 8px;
     width: 29%;
     font-size: 12.58px;
