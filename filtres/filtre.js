@@ -210,22 +210,51 @@ function binarisation(artworkName, canvasName){
 
 ///// YANI
 function nomDuFiltre(artworkName, canvasName){
-	// CHARGEMENT DES TABLEAUX DE PIXELS
-	prefilter(artworkName, canvasName);
+    // CHARGEMENT DES TABLEAUX DE PIXELS
+    prefilter(artworkName, canvasName);
 
-	// TRAITEMENT / APPLICATION D'UN FILTRE
-	// remplacement du bleu par du rouge
+    // TRAITEMENT / APPLICATION D'UN FILTRE
 
-	for (var x = 0; x < width; x++) {
-		for (var y = 0; y < height; y++) {
-			//// VERT EN BLEU
-				let blue = tb[x][y];
-				tb[x][y] = tg[x][y];
-				tr[x][y] = 0;
-				tg[x][y] = blue;
-		}
-	}
+    for (var x = 0; x < width; x++) {
+        for (var y = 0; y < height; y++) {
 
-	// MISE À JOUR DE L'IMAGE
-	postfilter();
+            //// CHANGEMENT TEINTE EN BLEU
+            //     let blue = tb[x][y];
+            //     tb[x][y] = tg[x][y];
+            //     tr[x][y] = 0;
+            //     tg[x][y] = blue;
+
+                //// CHANGEMENT TEINTE EN VIOLET
+                    // tb[x][y] = tr[x][y];
+                    // tr[x][y] = tg[x][y];
+                    // tg[x][y] = 0;
+
+                // //// CHANGEMENT TEINTE EN ROUGE
+                // tb[x][y] = 0;
+                // tr[x][y] = tg[x][y];
+                // tg[x][y] = 0;
+
+
+                if(tb[x][y] < tg[x][y] < tr[x][y]) {
+
+                     let blue = tb[x][y];
+                     tb[x][y] = tr[x][y];
+                    tr[x][y] = blue;
+
+                 }
+
+
+                let tglobal = (tr[x][y]+tg[x][y]+tb[x][y])/3;
+                if(tglobal < 128){
+                    tr[x][y] = tr[x][y] + 10;
+                    tg[x][y] = tg[x][y] + 10;
+                    tb[x][y] = tb[x][y] + 10;
+
+                }
+
+        }
+    }
+
+    // MISE À JOUR DE L'IMAGE
+    postfilter();
 }
