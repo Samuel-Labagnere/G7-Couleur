@@ -151,6 +151,7 @@ function blueToRed(artworkName, canvasName){
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
 	// remplacement du bleu par du rouge
+
 	for (var x = 0; x < width; x++) {
 		for (var y = 0; y < height; y++) {
 			//// BLEU EN ROUGE
@@ -169,12 +170,33 @@ function blueToRed(artworkName, canvasName){
 					tb[x][y] = tg[x][y];
 				}
 			}
-			//// CIEL BEIGE EN NOIR (fonctionne mal)
-			// if(tr[x][y] >= 230 && tg[x][y] >= 220 && tb[x][y] >= 190){
-			// 	tr[x][y] = 0;
-			// 	tb[x][y] = 0;
-			// 	tg[x][y] = 0;
-			// }
+		}
+	}
+
+	//// ASSOMBRIR LE CIEL BEIGE
+	for (var x = 0; x < width; x++) {
+		for (var y = 0; y < 180; y++) {
+			//// CAN BE MODIFIED ////
+			let tolerance = 25;
+			let shade = 25;
+
+			let defColorR = 248;
+			let defColorG = 228;
+			let defColorB = 183;
+			/////////////////////////
+
+			let defColorRmin = defColorR - tolerance;
+			let defColorRmax = defColorR + tolerance;
+			let defColorGmin = defColorG - tolerance;
+			let defColorGmax = defColorG + tolerance;
+			let defColorBmin = defColorB - tolerance;
+			let defColorBmax = defColorB + tolerance;
+
+			if((defColorRmin <= tr[x][y] &&  tr[x][y]  <= defColorRmax) && (defColorGmin <= tg[x][y] && tg[x][y] <= defColorGmax) && (defColorBmin <= tb[x][y] && tb[x][y] <= defColorBmax)){
+				tr[x][y] -= shade;
+				tg[x][y] -= shade;
+				tb[x][y] -= shade;
+			}
 		}
 	}
 
@@ -201,6 +223,28 @@ function binarisation(artworkName, canvasName){
 				tg[x][y] = 255;
 				tb[x][y] = 255;
 			}
+		}
+	}
+
+	for (var y = 1; y < height-1; y++) { 
+		for (var x = 1; x < width-1; x++) {
+
+			var moyr = (tr[x][y + 1] + tr[x + 1][y + 1] + tr[x - 1][y + 1] + 
+						tr[x][y]   + tr[x + 1][y]   + tr[x - 1][y] + 
+						tr[x][y - 1] + tr[x + 1][y - 1] + tr[x - 1][y - 1])/9;
+
+			var moyb = (tb[x][y + 1] + tb[x + 1][y + 1] + tb[x - 1][y + 1] + 
+					   tb[x][y] + tb[x + 1][y] + tb[x - 1][y] + 
+					   tb[x][y - 1] + tb[x + 1][y - 1] + tb[x - 1][y - 1])/9;
+
+			var moyg = (tg[x][y + 1]+tg[x+1][y+1]+tg[x-1][y+1]+
+					   tg[x][y]+tg[x+1][y]+tg[x-1][y]+
+					   tg[x][y-1]+tg[x+1][y-1]+tg[x-1][y-1])/9;
+
+			tr[x][y] = moyr;
+			tb[x][y] = moyb;
+			tg[x][y] =moyg;
+			//ta[x][y] = 50;
 		}
 	}
 
