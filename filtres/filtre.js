@@ -188,11 +188,11 @@ function binarisation(artworkName, canvasName){
 	prefilter(artworkName, canvasName);
 
 	// TRAITEMENT / APPLICATION D'UN FILTRE
-	// remplacement du bleu par du rouge
-	for (var x = 0; x < width; x++) {
-		for (var y = 0; y < height; y++) {
-			var tglobal = (tr[x][y]+tg[x][y]+tb[x][y])/3;
-			if(tglobal <= 128){
+
+	for (var x = 0; x < width; x++) { // boucle ++ = passage à la cellule suivante 
+		for (var y = 0; y < height; y++) { // y vertical 
+			var moyenne = (tr[x][y]+tg[x][y]+tb[x][y])/3; // pour savoir s'il est assez lumineux -> moyenne 
+			if(moyenne <= 128){ // moitié 255
 				tr[x][y] = 0;
 				tg[x][y] = 0;
 				tb[x][y] = 0;
