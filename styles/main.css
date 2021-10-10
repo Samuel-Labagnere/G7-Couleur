@@ -96,12 +96,30 @@ p {
 /* --> REST HERE <-- */
 body {
   background-color: var(--background-color);
+  height: 100vh;
+  
+
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 
 .accueil {
   min-height: 100vh;
@@ -129,14 +147,14 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background-color: violet;*/
   justify-content: flex-start;
   padding-bottom: 40vh;
+
 }
 
 nav {
@@ -180,6 +198,7 @@ nav {
 
 #container-1 {
   background-color: var(--brown-color);
+  scroll-snap-align: start;
 }
 
 #container-2 {
@@ -314,6 +333,7 @@ footer{
 
 .subtitlefooter{
   color: var(--white-color);
-  font-size: 1.125rem;
-  letter-spacing: 0.125rem;
+  font-size: 12px;
+  letter-spacing: 0.100rem;
+  font-family: "Roboto regular ",  sans-serif !important;
 }
